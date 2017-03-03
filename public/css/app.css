@@ -1,0 +1,72 @@
+.accordion-title {
+	font-size: 1rem;
+	border-color: #e6e6e6;
+}
+
+.accordion-item.is-active {
+	background-color:  #e6e6e6;
+}
+
+.accordion-item:last-child > :first-child,.accordion-item:last-child > :last-child
+{
+	border-bottom-color:  #e6e6e6;
+}
+
+.accordion-content {
+	padding: 0;
+	border-color: #e6e6e6;
+}
+
+.accordion-item.has-posts li {
+	cursor: pointer;
+}
+
+ul.striped {
+	list-style: none;  
+	padding: 0;  
+	margin: 0; 
+	font-size: 0.9rem; 
+    
+}
+
+ul.striped li {
+	padding: 0.2rem 1rem;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    background-color: #e6e6e6;
+}
+
+ul.striped li:nth-child(odd) {
+	background-color: #fff;  
+}
+
+.reveal-modal {
+	background-color: #fff;
+	width: 80%;
+	margin: 3rem auto;
+	padding: 1rem;
+	position: relative;
+}
+
+.reveal-modal .btn_close {
+	position: absolute;
+	top:1rem;
+	right:1rem;
+}
+
+.reveal-modal .tabs > div {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.reveal-modal .tabs .htmlview {
+	background-color: #767676 ;
+	color: white;
+	font-family: monospace;
+	white-space: pre;
+
+}
+.reveal-modal .tabs .hidden {
+	display: none;
+}

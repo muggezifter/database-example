@@ -1,0 +1,24 @@
+<a href='#' class='btn_close'>close</a>
+<h3 id="modalTitle">{{ post_title }}</h3>
+<hr />
+{{ #user }}
+user: <i>{{ nickname }}</i>
+{{ /user }}
+<br />date: <i>{{ post_date_gmt }} gmt</i>
+<hr />
+<button id='btn_preview'class='small button'>preview</button>
+<button id='btn_html' class='small button secondary'>html</button>
+<div class="tabs">
+	<div class="preview ">{{{ post_content }}}</div>
+	<div class="htmlview hidden">{{ post_content }}</div>
+</div>
+<hr />
+metadata: {{ ^meta }}<i>geen</i>{{ /meta }}
+<ul>
+{{ #meta }}
+<li><b>{{ meta_key }}:</b>  {{ meta_value }}{{ ^meta_value }}<i>leeg</i>{{ /meta_value }}</li>
+{{ /meta }}
+</ul>
+
+
+

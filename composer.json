@@ -4,6 +4,6 @@
         "mustache/mustache": "2.11.*"
     },
     "autoload": {
-        "psr-4": {"Wordpress\\": "models/"}
+        "psr-4": {"WordpressDB\\": "models/"}
     }
 }
