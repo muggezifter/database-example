@@ -1,3 +1,4 @@
 .Trash*
 vendor/
 *.ini
+.idea/
