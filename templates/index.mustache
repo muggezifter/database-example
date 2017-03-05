@@ -1,52 +1,54 @@
-
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>db example</title>
-    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/vendor/foundation.min.css">
     <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-    <div class="row">
-      <div class="small-6 large-12 columns">
+</head>
+<body>
+<div class="row">
+    <div class="small-6 large-12 columns">
         <h2>db example</h2>
-      </div>
     </div>
-    <div class="row">
-      <div class="small-6 large-12 columns">         
-        <ul class="accordion" data-responsive-accordion-tabs="tabs medium-accordion large-accordion" data-allow-all-closed="true">
-          {{#users}}
-          <li class="accordion-item  {{^postcount}}loaded{{/postcount}}" data-accordion-item  data-userid="{{ ID }}">
-            <a  class="accordion-title">{{nickname}} ({{postcount}} posts)</a>
-            <div class="accordion-content" data-tab-content>
-              {{^postcount}}
-              <ul class="striped">
-                <li>no posts</li>
-              </ul>
-              {{/postcount}}
-            </div>
-          </li>
-          {{/users}}
-        </ul>
-      </div>
-	</div>
+</div>
+<div class="row">
+    <div class="small-6 large-12 columns">
+        <ul class="accordion" data-responsive-accordion-tabs="tabs medium-accordion large-accordion"
+            data-allow-all-closed="true">
+            {{#users}}
+                <li class="accordion-item  {{^postcount}}loaded{{/postcount}}" data-accordion-item
+                    data-userid="{{ ID }}">
+                    <a class="accordion-title">{{nickname}} ({{postcount}} posts)</a>
 
-<div id="postModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog" >
+                    <div class="accordion-content" data-tab-content>
+                        {{^postcount}}
+                            <ul class="striped">
+                                <li>no posts</li>
+                            </ul>
+                        {{/postcount}}
+                    </div>
+                </li>
+            {{/users}}
+        </ul>
+    </div>
 </div>
 
-    <script src="js/vendor/jquery-3.1.1.min.js"></script>
-    <script src="js/vendor/foundation.min.js"></script>
-    <script src="js/vendor/mustache.min.js"></script>
-    <script src="js/app.js"></script>
-    <script id="postsListTpl" type="text/template">
-     {{{ postslist }}}
-    </script>
-    <script id="postModalTpl" type="text/template">
-     {{{ postsmodal }}}
-    </script>
+<div id="postModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+</div>
 
- </body>
+<script src="js/vendor/jquery-3.1.1.min.js"></script>
+<script src="js/vendor/foundation.min.js"></script>
+<script src="js/vendor/mustache.min.js"></script>
+<script src="js/app.js"></script>
+<script id="postsListTpl" type="text/template">
+        {{{ postslist }}}
+</script>
+<script id="postModalTpl" type="text/template">
+        {{{ postsmodal }}}
+</script>
+
+</body>
 </html>
