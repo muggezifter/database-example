@@ -3,7 +3,7 @@ require "vendor/autoload.php";
 
 use Illuminate\Database\Capsule\Manager;
 
-// get connection info from ini file
+// get db credentials from ini file
 $dbconfig = parse_ini_file('config/db.ini');
 
 // boot eloquent

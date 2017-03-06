@@ -1,14 +1,21 @@
 (function(){
-
-	// initialize foundaton
+    /**
+     * initialize foundation
+     */
 	$(document).foundation();
 
-	// create popup
+    /**
+     * create popup
+     *
+     * @type {Foundation.Reveal}
+     */
 	var modal = new Foundation.Reveal($('#postModal'));
 
 	/**
 	 * show post with given id in popup
-	 */
+     *
+     * @param id
+     */
 	var showPost = function(id){
 		var template = $('#postModalTpl').html();
 		$.ajax({
@@ -29,10 +36,6 @@
 	 		)
 	 		modal.open();
 	 	});
-
-		
-		
-		//alert(id); 		
 	};
 
 	/**
@@ -70,7 +73,6 @@
 					}
 				);
 	 	}});
-
 }());
 
 
